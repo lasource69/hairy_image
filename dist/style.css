@@ -5,5 +5,12 @@ body {
 
 canvas {
 	background-image: radial-gradient(#666, #333);
+	width: 100vw;
+	height: 100vh;
 }
 
+window.addEventListener('resize', function() {
+  const canvas = document.querySelector('canvas');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
